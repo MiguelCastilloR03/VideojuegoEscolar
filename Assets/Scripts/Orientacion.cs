@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum OrientacionUI
 {
@@ -22,5 +23,11 @@ public class Orientacion : MonoBehaviour
                 DirectionController.Instance.SetOrientationToPortrait();
                 break;
         }
+    }
+
+
+    public void OnChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
